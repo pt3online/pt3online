@@ -1114,7 +1114,7 @@ export default function SeoDashboard() {
             Top 20 SEO / ASEO by Cluster
           </h2>
 
-          <div className="text-sm font-medium text-slate-400">
+          <div className="text-sm font-normal text-slate-400">
             20 Cluster ที่มี SEO + ASEO สูงสุด
           </div>
         </div>
