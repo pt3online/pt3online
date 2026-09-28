@@ -1511,7 +1511,7 @@ export default function PlanDashboard() {
             value={
               totalCount
             }
-            valueClass="text-emerald-500"
+            valueClass="text-emerald-400"
           />
 
           <KpiBox
@@ -1519,7 +1519,7 @@ export default function PlanDashboard() {
             value={
               planCount
             }
-            valueClass="text-amber-500"
+            valueClass="text-amber-400"
           />
 
           <KpiBox
@@ -1527,7 +1527,7 @@ export default function PlanDashboard() {
             value={
               postCount
             }
-            valueClass="text-emerald-500"
+            valueClass="text-emerald-400"
           />
 
           <KpiBox
@@ -2249,22 +2249,26 @@ function KpiBox({
   valueClass: string;
 }) {
   return (
-    <div className="relative min-h-[170px] overflow-hidden rounded-[24px] border border-slate-200 bg-white p-7 shadow-sm">
+    <div className="relative min-h-[140px] overflow-hidden rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm">
+
       <div className="absolute -right-8 -top-9 h-28 w-28 rounded-full bg-emerald-50" />
 
       <div className="relative">
-        <div className="text-lg font-extrabold uppercase tracking-wide text-slate-500">
+
+        <div className="text-sm font-extrabold uppercase tracking-wide text-slate-500">
           {title}
         </div>
 
         <div
-          className={`mt-5 text-5xl font-black ${valueClass}`}
+          className={`mt-3 text-4xl font-black ${valueClass}`}
         >
           {value.toLocaleString(
             "th-TH"
           )}
         </div>
+
       </div>
+
     </div>
   );
 }
