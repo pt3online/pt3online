@@ -1110,7 +1110,7 @@ export default function SeoDashboard() {
 
       <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-          <h2 className="text-2xl font-extrabold text-[#15233f]">
+          <h2 className="text-2xl font-extrabold text-[#545454]">
             Top 20 SEO / ASEO by Cluster
           </h2>
 
