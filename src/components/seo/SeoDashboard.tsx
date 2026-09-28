@@ -907,7 +907,7 @@ export default function SeoDashboard() {
 
       <section className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <div className="flex flex-wrap items-center gap-4">
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#15233f] sm:text-4xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#494949] sm:text-4xl">
             Content SEO / ASEO Dashboard
           </h1>
 
