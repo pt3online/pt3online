@@ -1193,7 +1193,7 @@ export default function PerformanceDashboard() {
           <div className="h-7 w-7 animate-spin rounded-full border-[3px] border-slate-200 border-t-teal-500" />
 
           <div>
-            <div className="text-lg font-black text-slate-800">
+            <div className="text-lg font-black text-slate-500">
               กำลังโหลด Performance
             </div>
 
@@ -1255,7 +1255,7 @@ export default function PerformanceDashboard() {
 
       <section className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
         <div>
-          <h1 className="text-3xl font-black uppercase tracking-wide text-[#112342] sm:text-4xl">
+          <h1 className="text-2xl font-black uppercase tracking-wide text-[#112342] sm:text-3xl">
             Performance Post Dashboard
           </h1>
 
@@ -1873,7 +1873,7 @@ function MainKpi({
       </div>
 
       <div
-        className={`mt-5 text-5xl font-black ${color}`}
+        className={`mt-5 text-3xl font-black ${color}`}
       >
         {formatNumber(
           value
