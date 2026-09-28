@@ -4442,13 +4442,13 @@ function SalesKpi({
 
           mt-2
 
-          text-[20px]
+          text-[30px]
 
           font-bold
 
           leading-none
 
-          text-[#14272E]
+          text-[#3d3e3f]
 
         "
 

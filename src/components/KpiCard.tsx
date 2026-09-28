@@ -30,7 +30,7 @@ export default function KpiCard({
 
       <div className="mt-5">
 
-        <div className="break-words text-[18px] font-bold leading-[1.45] text-[#14242B]">
+        <div className="break-words text-[20px] font-bold leading-[1.45] text-[#14242B]">
           {value}
         </div>
 
