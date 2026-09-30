@@ -1589,7 +1589,7 @@ export default function PlanDashboard() {
               ‹
             </button>
 
-            <h2 className="min-w-0 flex-1 text-center text-xl font-black text-slate-800 sm:flex-none sm:min-w-[260px] sm:text-3xl">
+            <h2 className="min-w-0 flex-1 text-center text-xl font-bold text-slate-600 sm:flex-none sm:min-w-[260px] sm:text-2xl">
               {formatThaiMonth(
                 selectedYear,
                 selectedMonth

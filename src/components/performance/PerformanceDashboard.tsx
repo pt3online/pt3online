@@ -1255,7 +1255,7 @@ export default function PerformanceDashboard() {
 
       <section className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
         <div>
-          <h1 className="text-2xl font-black uppercase tracking-wide text-[#112342] sm:text-3xl">
+          <h1 className="text-2xl font- uppercase tracking-wide text-[#112342] sm:text-3xl">
             Performance Post Dashboard
           </h1>
 
@@ -1957,7 +1957,7 @@ function BarChart({
                 className="flex h-full min-w-[42px] flex-1 flex-col justify-end"
               >
                 <div className="flex flex-1 flex-col justify-end">
-                  <div className="mb-2 text-center text-xs font-black text-[#112342] sm:text-sm">
+                  <div className="mb-2 text-center text-xs font-medium text-[#112342] sm:text-sm">
                     {item.value >
                       0 &&
                       formatNumber(
