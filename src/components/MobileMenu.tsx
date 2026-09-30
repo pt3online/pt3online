@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-
 const menuItems = [
   {
     name: "Overview",
@@ -33,224 +32,215 @@ const menuItems = [
   },
 ];
 
-
 export default function MobileMenu() {
-
-
   const [open, setOpen] = useState(false);
-
   const pathname = usePathname();
 
-
-
   return (
-
     <>
-
-
       {/* Mobile Header */}
-
-      <div
-
+      <header
         className="
           fixed
           left-0
           top-0
-          z-50
+          z-[60]
           flex
+          h-16
           w-full
           items-center
           justify-between
-
+          border-b
+          border-white/10
           bg-[#004C48]
-
           px-4
-          py-3
-
           text-white
-
+          shadow-sm
           md:hidden
         "
-
       >
+        <div className="flex items-center gap-3">
+          <div
+            className="
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-lg
+              bg-white/10
+              text-sm
+              font-bold
+            "
+          >
+            PT3
+          </div>
 
-        <div
-          className="
-            font-bold
-          "
-        >
-          PT3 Digital
+          <div>
+            <div className="text-sm font-semibold leading-tight">
+              PT3 Digital
+            </div>
+
+            <div className="mt-0.5 text-[11px] text-white/60">
+              Marketing Dashboard
+            </div>
+          </div>
         </div>
 
-
         <button
-
-          onClick={() => setOpen(!open)}
-
+          type="button"
+          aria-label="เปิดเมนู"
+          onClick={() => setOpen(true)}
           className="
-            rounded-lg
+            flex
+            h-10
+            w-10
+            items-center
+            justify-center
+            rounded-xl
             bg-[#08736B]
-            px-3
-            py-2
             text-xl
+            transition
+            active:scale-95
           "
-
         >
-
           ☰
-
         </button>
-
-
-      </div>
-
-
-
-
+      </header>
 
       {/* Overlay */}
-
-      {
-        open && (
-
-          <div
-
-            onClick={() => setOpen(false)}
-
-            className="
-              fixed
-              inset-0
-              z-40
-              bg-black/40
-              md:hidden
-            "
-
-          />
-
-        )
-      }
-
-
-
-
+      {open && (
+        <div
+          onClick={() => setOpen(false)}
+          className="
+            fixed
+            inset-0
+            z-[70]
+            bg-black/40
+            backdrop-blur-[1px]
+            md:hidden
+          "
+        />
+      )}
 
       {/* Mobile Sidebar */}
-
       <aside
-
         className={`
           fixed
           left-0
           top-0
-          z-50
+          z-[80]
           h-screen
-          w-[240px]
-
+          w-[280px]
+          max-w-[85vw]
           bg-[#004C48]
-
-          p-5
-
           text-white
-
+          shadow-2xl
           transition-transform
           duration-300
-
+          ease-out
           md:hidden
 
           ${
             open
-            ? "translate-x-0"
-            : "-translate-x-full"
+              ? "translate-x-0"
+              : "-translate-x-full"
           }
-
         `}
-
       >
-
-
+        {/* Sidebar Header */}
         <div
           className="
-            mb-8
-            text-lg
-            font-bold
+            flex
+            h-16
+            items-center
+            justify-between
+            border-b
+            border-white/10
+            px-5
           "
         >
-          PT3 Digital
+          <div>
+            <div className="text-base font-semibold">
+              PT3 Digital
+            </div>
+
+            <div className="mt-0.5 text-[11px] text-white/60">
+              Marketing Dashboard
+            </div>
+          </div>
+
+          <button
+            type="button"
+            aria-label="ปิดเมนู"
+            onClick={() => setOpen(false)}
+            className="
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-lg
+              bg-white/10
+              text-lg
+            "
+          >
+            ×
+          </button>
         </div>
 
+        {/* Menu */}
+        <nav className="flex flex-col gap-1.5 px-3 py-5">
+          {menuItems.map((item) => {
+            const active =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
 
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`
+                  flex
+                  min-h-[48px]
+                  items-center
+                  gap-3
+                  rounded-xl
+                  px-4
+                  py-3
+                  text-sm
+                  transition
 
-        <nav
-          className="
-            flex
-            flex-col
-            gap-2
-          "
-        >
-
-          {
-            menuItems.map((item)=>{
-
-
-              const active =
-                pathname === item.href;
-
-
-              return (
-
-                <Link
-
-                  key={item.href}
-
-                  href={item.href}
-
-                  onClick={() => setOpen(false)}
-
-                  className={`
-
+                  ${
+                    active
+                      ? "bg-[#08736B] font-semibold text-white"
+                      : "text-[#B8D7D4] hover:bg-white/5 hover:text-white"
+                  }
+                `}
+              >
+                <span
+                  className="
                     flex
+                    w-6
+                    shrink-0
                     items-center
-                    gap-3
-                    rounded-lg
-                    px-4
-                    py-3
-                    text-sm
-
-                    ${
-                      active
-                      ? "bg-[#08736B] text-white font-semibold"
-                      : "text-[#B8D7D4]"
-                    }
-
-                  `}
-
+                    justify-center
+                    text-base
+                  "
                 >
+                  {item.icon}
+                </span>
 
-                  <span>
-                    {item.icon}
-                  </span>
-
-                  <span>
-                    {item.name}
-                  </span>
-
-
-                </Link>
-
-              );
-
-            })
-          }
-
-
+                <span>
+                  {item.name}
+                </span>
+              </Link>
+            );
+          })}
         </nav>
-
-
       </aside>
-
-
     </>
-
   );
-
 }

@@ -1255,7 +1255,7 @@ export default function PerformanceDashboard() {
 
       <section className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
         <div>
-          <h1 className="text-2xl font- uppercase tracking-wide text-[#112342] sm:text-3xl">
+          <h1 className="text-xl font-bold font- uppercase tracking-wide text-[#112342] sm:text-3xl">
             Performance Post Dashboard
           </h1>
 
