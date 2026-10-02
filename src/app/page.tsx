@@ -29,6 +29,7 @@ export default async function Home() {
   return (
     <div className="space-y-6 lg:space-y-8">
 
+      {/* HEADER */}
       <div>
         <h1 className="text-2xl font-bold text-[#14242B] sm:text-3xl">
           ภาพรวม Digital Marketing
@@ -40,6 +41,7 @@ export default async function Home() {
       </div>
 
 
+      {/* KPI CARDS */}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
 
         <KpiCard
@@ -48,7 +50,7 @@ export default async function Home() {
             sales.totalSales
           )}
           description="จากทุกช่องทาง"
-          icon="💰"
+          icon="fa-solid fa-wallet"
         />
 
         <KpiCard
@@ -57,7 +59,7 @@ export default async function Home() {
           description={formatBaht(
             sales.topChannel.sales
           )}
-          icon="🏆"
+          icon="fa-solid fa-chart-line"
         />
 
         <KpiCard
@@ -66,19 +68,20 @@ export default async function Home() {
           description={formatBaht(
             sales.topPackage.sales
           )}
-          icon="📦"
+          icon="fa-solid fa-box-open"
         />
 
         <KpiCard
           title="Campaign Active"
           value={activeCampaigns.length.toString()}
           description="Active Campaign"
-          icon="🚀"
+          icon="fa-solid fa-bullhorn"
         />
 
       </div>
 
 
+      {/* SALES OVERVIEW */}
       <SectionCard
         title="Sales Overview"
         subtitle="Sales Trend / Channel Performance"
@@ -90,6 +93,7 @@ export default async function Home() {
       </SectionCard>
 
 
+      {/* ACTIVE CAMPAIGN */}
       <SectionCard
         title="Campaign Active"
         subtitle="Campaign ที่กำลังดำเนินการ"
@@ -100,6 +104,7 @@ export default async function Home() {
       </SectionCard>
 
 
+      {/* DIGITAL INSIGHT */}
       <InsightCard
         title="Digital Insight"
         description="ภาพรวม Performance และ Insight สำคัญจาก Digital Marketing"

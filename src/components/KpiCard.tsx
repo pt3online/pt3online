@@ -12,22 +12,29 @@ export default function KpiCard({
   icon,
 }: KpiCardProps) {
   return (
-    <div className="h-full min-h-[190px] rounded-[24px] border border-[#D9E3E0] bg-white p-6 shadow-[0_2px_8px_rgba(15,23,42,0.04)]">
+    <div className="h-full min-h-[190px] rounded-[24px] border border-[#E1E8E6] bg-white p-6 shadow-[0_2px_8px_rgba(15,23,42,0.035)]">
 
+      {/* Header */}
       <div className="flex items-start justify-between gap-4">
 
+        {/* Title */}
         <div className="min-w-0 flex-1">
-          <p className="text-[15px] font-medium leading-6 text-[#5F6F86] sm:text-[16px]">
+          <p className="text-[15px] font-medium leading-6 text-[#65747F] sm:text-[16px]">
             {title}
           </p>
         </div>
 
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EAF6F3] text-[22px]">
-          {icon}
+        {/* Font Awesome Icon */}
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border border-[#E7EEEC] bg-[#F8FAF9] text-[#60746F]">
+          <i
+            className={`${icon} text-[16px]`}
+            aria-hidden="true"
+          />
         </div>
 
       </div>
 
+      {/* Content */}
       <div className="mt-5">
 
         <div className="break-words text-[20px] font-bold leading-[1.45] text-[#14242B]">
