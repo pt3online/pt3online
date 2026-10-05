@@ -347,7 +347,7 @@ export default function SalesInsightPanel({
           bg-black/5
           px-5
           py-3
-          text-[9px]
+          text-[12px]
           leading-4
           text-white/60
         "
@@ -403,7 +403,7 @@ function MetricCard({
 
       <p
         className="
-          text-[10px]
+          text-[12px]
           font-medium
           text-white/70
         "
@@ -509,7 +509,7 @@ function InsightSection({
 
         <div
           className="
-            text-[10px]
+            text-[12px]
             font-medium
             uppercase
             tracking-[0.08em]
@@ -523,9 +523,9 @@ function InsightSection({
         <div
           className="
             mt-0.5
-            text-[12px]
+            text-[15px]
             font-bold
-            leading-5
+            leading-6
             text-white
           "
         >
@@ -536,8 +536,8 @@ function InsightSection({
         <p
           className="
             mt-0.5
-            text-[10px]
-            leading-4
+            text-[13px]
+            leading-6
             text-white/70
           "
         >
